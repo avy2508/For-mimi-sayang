@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #f8d7dc, #e0d9f7);
+            color: #4a4a4a;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #6f42c1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #5a5a5a;
+            max-width: 80%;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out 1s forwards;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ffb6c1;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff8ba7;
+        }
+
+        .tulips {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tulip {
+            height: 60px;
+            width: 60px;
+            margin: 10px;
+            background-color: #ffb6c1;
+            border-radius: 50%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Tulip_-_flower_of_Spring.jpg/800px-Tulip_-_flower_of_Spring.jpg');
+            background-size: cover;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>For My Love</h1>
+    <p id="message">Good morning sayang i. I hope this message brings a smile to your face, just as you bring joy to my life every day. You are everything I could have ever dreamed of, and more. I was bored last night so i made this for you hehe. Please know that i cant wait to see you. Get well soon okay sayang and come see me. I tak sabar jumpa you. I missed u a little too much malam tadi but i understand you are sick. Take care of yourself okay sayang. I love you tons.</p>
+    <button onclick="revealMessage()">Click for Surprise</button>
+    
+    <div class="tulips">
+        <div class="tulip"></div>
+        <div class="tulip"></div>
+        <div class="tulip"></div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            const message = document.getElementById('message');
+            message.style.opacity = '1';
+            message.textContent = "I love you endlessly. You complete me in every way, and I'm so grateful for you. Always and forever.";
+        }
+    </script>
+</body>
+</html>
